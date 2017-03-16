@@ -1,0 +1,12 @@
+{
+  "name": "marsar",
+  "description": "An AR / WebVR visualisation of Mars based on A-Frame and AR.js",
+  "version": "0.1.1",
+  "license": "MIT",
+  "scripts": {
+    "start": "budo --live --verbose --port 3000 --open"
+  },
+  "dependencies": {
+    "budo": "^7.0.0"
+  }
+}
