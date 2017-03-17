@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  font-family: 'Ubuntu', 'sans-serif';
+  font-weight: 300;
+  width: 100%;
+  min-width: 320px;
+  background: #101013;
+}
+
+/* STRUCTURE */
+#splash-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #101013;
+}
+#splash-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 720px;
+  min-width: 320px;
+}
+#splash-txt {
+  margin: 25px 0 0 205px;
+  width: auto;
+  min-width: 275px;
+}
+#page {
+  position: relative;
+  margin: 0 0 2em 0;
+  padding: 0 0 1em 0;
+  width: 100%;
+  min-height: calc(100vh - 3em);
+  z-index: 1;
+  background: #101013;
+}
+.content {
+  margin: 0 auto;
+  width: 60%;
+  max-width: 720px;
+  min-width: 320px;
+}
+#footer {
+  position: fixed;
+  z-index: -1;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+}
+
+/* IMAGES */
+#splash-img {
+  position: absolute;
+  width: 180px;
+  height: auto;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  float: left;
+}
+.imgbox {
+  margin: calc(1em - 1%);
+}
+img
+{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.my-gallery
+{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.my-gallery img
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.my-gallery figure
+{
+    float: left;
+    padding: 1.5%;
+    width: 30%;
+    transition: 100ms;
+}
+.my-gallery figure:hover {
+  opacity: 0.8;
+  transition: 400ms;
+}
+
+
+/* SHAPES & ANIMATIONS */
+#nav-down {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid #ffffff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  color: #ffffff;
+  z-index: 1;
+  transition: 100ms;
+  cursor: default;
+  opacity: 0.8;
+}
+#nav-down::before {
+  content: 'Scroll down';
+  display: block;
+  margin: -2.5em 0 0 -50px;
+  width: 100px;
+  font-size: 0.8em;
+  text-align: center;
+  opacity: 0.8;
+}
+#nav-down:hover {
+  border-top: 10px solid #888888;
+  color: #888888;
+  transition: 400ms;
+}
+#nav-left {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  border-bottom: 10px solid transparent;
+  text-decoration: none;
+  color: #ffffff;
+  z-index: 1;
+  transition: 100ms;
+  cursor: pointer;
+  opacity: 0.8;
+}
+#nav-left::after {
+  content: 'Back';
+  position: absolute;
+  top: -0.7em;
+  left: 1.3em;
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+#nav-left:hover {
+    border-right: 10px solid #888888;
+    color: #888888;
+    transition: 400ms;
+    opacity: 0.8;
+}
+.embedded-content {
+  width: 100%;
+  height: 60vh;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  margin: 0 0.65em 0 0.65em;
+  padding: 3em 0 0 0;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #ffffff;
+}
+h2 {
+  margin: 0 0.95em 0 0.95em;
+  padding: 2em 0 0 0;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #ffffff;
+}
+p {
+  margin: 1em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #ffffff;
+}
+#footer p {
+  margin: 0 0.8em 0.8em 0.8em;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: right;
+}
+p.quote {
+  margin: 3em;
+  font-style: italic;
+}
+p.byline {
+  margin: -2em 3em 3em 3em;
+  font-style: normal;
+  text-align: right;
+}
+.byline span {
+  font-style: italic;
+}
+p.inf {
+  margin: 1em 1em -0.75em 1em;
+}
+.inf span {
+  font-size: 0.8em;
+}
+ul {
+  margin: 1em 2em 1em 2em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: justify;
+  color: #ffffff;
+}
+li {
+  margin: 1em 1em 1em 1em;
+}
+ul.prj-links {
+  margin: 1em 0 1em 0;
+  list-style: none;
+}
+.prj-links li {
+  margin: 0 1em 0 1em;
+}
+
+/* LINKS */
+a:link, a:visited {
+  text-decoration: none;
+  border-bottom: 1px dotted #aaaaaa;
+  color: #aaaaaa;
+  transition: 100ms;
+}
+a:hover, a:active, a:focus {
+  border-bottom: 1px dotted #888888;
+  color: #888888;
+  transition: 400ms;
+}
+
+/* MOBILE DEVICES */
+@media all and (max-width: 600px) {
+  #splash-content {
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #splash-img {
+    position: relative;
+    top: 0;
+    left: -5%;
+    transform: translateY(0);
+    float: none;
+    margin: 0 auto;
+    padding: 0 0 1em 0;
+  }
+  #splash-txt {
+    margin: 0 auto;
+  }
+  #splash-page, #page {
+    min-height: 400px;
+  }
+  .content {
+    margin: 0 auto;
+    width: 100%;
+  }
+  #nav-down {
+    display: none;
+  }
+}
