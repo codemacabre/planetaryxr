@@ -1,7 +1,7 @@
 {
-  "name": "marsar",
-  "description": "An AR / WebVR visualisation of Mars based on A-Frame and AR.js",
-  "version": "0.1.1",
+  "name": "planetaryar",
+  "description": "AR / WebVR 3D maps of planetary bodies",
+  "version": "0.1.2",
   "license": "MIT",
   "scripts": {
     "start": "budo --live --verbose --port 3000 --open"
