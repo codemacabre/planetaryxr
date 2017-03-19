@@ -1,7 +1,7 @@
 # PlanetaryAR
 
 ## Overview
-[PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is a web app, providing AR / WebVR 3D maps of planetary bodies using [A-Frame](https://a-frame.io/) and [AR.js](https://github.com/jeromeetienne/AR.js).
+[PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is an AR / WebVR web app, built using [A-Frame](https://a-frame.io/) and [AR.js](https://github.com/jeromeetienne/AR.js), featuring 3D maps of planetary bodies.
 
 ## Usage
 PlanetaryAR can be run as a local webpage. For development it is faster to run a local server:
