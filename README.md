@@ -1,6 +1,8 @@
 # PlanetaryAR
 
-[![Codeship](https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg)](https://app.codeship.com/projects/208744)
+[![Codeship Build](https://img.shields.io/codeship/93d279e0-eeea-0134-6d5c-62b847b8d86d/master.svg)](https://app.codeship.com/projects/208744)
+[![GitHub issues](https://img.shields.io/github/issues/codemacabre/planetaryar.svg)](https://github.com/codemacabre/planetaryar/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/CodeMacabre/planetaryar/master/LICENSE.md)
 
 ## Overview
 [PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is an AR / WebVR web app, built using [A-Frame](https://a-frame.io/) and [AR.js](https://github.com/jeromeetienne/AR.js), featuring 3D maps of planetary bodies.
