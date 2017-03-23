@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
     <!-- SCRIPTS -->
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/blairmacintyre/aframe-look-at-billboard-component/master/dist/aframe-look-at-billboard-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
     <!-- STYLING -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,500" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet" type="text/css">
@@ -27,10 +27,20 @@
       <a-entity
         id="camera"
         camera
-        position="0 0 0"
-        look-controls
-        wasd-controls
-        >
+        position="0 0 5"
+        orbit-controls="
+          autoRotate: false;
+          target: #target;
+          enableDamping: true;
+          dampingFactor: 0.25;
+          rotateSpeed: 0.14;
+          minDistance: 3;
+          maxDistance: 100;"
+        mouse-cursor="">
+        <a-entity
+          text="value: Mars; width: 1; align: left; baseline: bottom;"
+          position="-0.5 0 -1">
+        </a-entity>
         <a-entity
           cursor="fuse: true; fuseTimeout: 500"
           position="0 0 -1"
@@ -38,17 +48,8 @@
           material="color: #ffffff; opacity: 0.8; shader: flat"></a-entity>
       </a-entity>
 
-      <!-- UI -->
-      <a-entity
-        text="value: Mars; width: 1; align: left; baseline: bottom;"
-        position="-0.5 0 -1"
-        billboard
-        >
-      </a-entity>
-
       <!-- Planet -->
       <a-entity
-        position="0 0 -4"
         rotation="0 0 25">
         <a-entity>
           <a-animation
@@ -56,14 +57,17 @@
             easing="linear"
             dur="60000"
             to="0 360 0"
-            repeat="indefinite"></a-animation>
+            repeat="indefinite">
+          </a-animation>
           <a-sphere
             id="target"
             src="#basemapMars"
             position="0 0 0"
-            radius="2"></a-sphere>
+            radius="2">
+          </a-sphere>
         </a-entity>
       </a-entity>
+
       <a-sky color="#101013"></a-sky>
     </a-scene>
   </body>
