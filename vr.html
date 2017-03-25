@@ -19,9 +19,12 @@
       <a-assets>
         <img id="basemapMercury" src="./img/mercury.jpg">
         <img id="basemapVenus" src="./img/venus.jpg">
-        <!-- <img id="basemapEarth" src="./img/earth-bm.jpg"> -->
-        <img id="basemapEarth" src="./img/earth-bm-loic.jpg">
+        <img id="basemapEarth" src="./img/earth.jpg">
         <img id="basemapMars" src="./img/mars.jpg">
+        <img id="basemapJupiter" src="./img/jupiter.jpg">
+        <!-- <img id="basemapSaturn" src="./img/saturn.jpg"> -->
+        <!-- <img id="basemapUranus" src="./img/uranus.jpg"> -->
+        <!-- <img id="basemapNeptune" src="./img/neptune.jpg"> -->
         <img id="basemapPluto" src="./img/pluto.jpg">
       </a-assets>
 
@@ -29,7 +32,7 @@
       <a-entity
         id="camera"
         camera
-        position="0 0 5"
+        position="0 0 10"
         orbit-controls="
           autoRotate: false;
           target: #target;
@@ -78,7 +81,7 @@
             radius="2">
           </a-sphere>
         </a-entity>
-      </a-entity> -->
+      </a-entity>
 
       <a-entity
         id="Earth"
@@ -114,6 +117,87 @@
           <a-sphere
             id="target"
             src="#basemapMars"
+            position="0 0 0"
+            radius="2">
+          </a-sphere>
+        </a-entity>
+      </a-entity> -->
+
+      <a-entity
+        id="Jupiter"
+        rotation="0 0 -3.1">
+        <a-entity>
+          <a-animation
+            attribute="rotation"
+            easing="linear"
+            dur="60000"
+            to="0 360 0"
+            repeat="indefinite">
+          </a-animation>
+          <a-sphere
+            id="target"
+            src="#basemapJupiter"
+            position="0 0 0"
+            radius="4">
+          </a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <!--
+      <a-entity
+        id="Saturn"
+        rotation="0 0 -26.7">
+        <a-entity>
+          <a-animation
+            attribute="rotation"
+            easing="linear"
+            dur="60000"
+            to="0 360 0"
+            repeat="indefinite">
+          </a-animation>
+          <a-sphere
+            id="target"
+            src="#basemapSaturn"
+            position="0 0 0"
+            radius="2">
+          </a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <a-entity
+        id="Uranus"
+        rotation="0 0 -82.2">
+        <a-entity>
+          <a-animation
+            attribute="rotation"
+            easing="linear"
+            dur="60000"
+            to="0 360 0"
+            repeat="indefinite">
+          </a-animation>
+          <a-sphere
+            id="target"
+            src="#basemapUranus"
+            position="0 0 0"
+            radius="2">
+          </a-sphere>
+        </a-entity>
+      </a-entity>
+
+      <a-entity
+        id="Neptune"
+        rotation="0 0 -28.3">
+        <a-entity>
+          <a-animation
+            attribute="rotation"
+            easing="linear"
+            dur="60000"
+            to="0 360 0"
+            repeat="indefinite">
+          </a-animation>
+          <a-sphere
+            id="target"
+            src="#basemapNeptune"
             position="0 0 0"
             radius="2">
           </a-sphere>
