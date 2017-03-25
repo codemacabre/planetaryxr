@@ -8,18 +8,27 @@ html, body {
   overflow: hidden;
 }
 #page {
-  position: relative;
-  margin: 0 0 2em 0;
-  padding: 0 0 1em 0;
+  background: #101013;
   width: 100%;
-  min-height: calc(100vh - 3em);
-  z-index: 1;
+  height: 100vh;
 }
-.content {
-  margin: 0 auto;
-  width: 60%;
-  max-width: 720px;
-  min-width: 320px;
+.left {
+  position: absolute;
+  margin-left: 10%;
+  width: 40%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  text-align: center;
+}
+.right {
+  position: absolute;
+  margin-right: 10%;
+  width: 40%;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
 }
 
 /* SHAPES & ANIMATIONS */
@@ -47,10 +56,10 @@ html, body {
   opacity: 0.8;
 }
 #nav-left:hover {
-    border-right: 10px solid #888888;
-    color: #888888;
-    transition: 400ms;
-    opacity: 0.8;
+  border-right: 10px solid #888888;
+  color: #888888;
+  transition: 400ms;
+  opacity: 0.8;
 }
 
 /* LINKS */
@@ -63,5 +72,18 @@ a:link, a:visited {
 a:hover, a:active, a:focus {
   border-bottom: 1px dotted #888888;
   color: #888888;
+  transition: 400ms;
+}
+.button a:link, .button a:visited {
+  padding: 2.5em;
+  font-size: 1.5em;
+  border: 1px dotted #aaaaaa;
+  transition: 100ms;
+}
+.button a:hover, .button a:active, .button a:focus {
+  color: #ffffff;
+  border: 1px dotted #ffffff;
+  padding: 3em;
+  overflow: hidden;
   transition: 400ms;
 }
