@@ -12,12 +12,16 @@ Although primarily focused on creating an AR experience, PlanetaryAR also featur
 To test the AR and VR apps, visit the [links](#links) sections below.
 
 ## Resources
-Planetary basemaps have been taken from the following locations:
-+ Mercury: [USGS](https://astrogeology.usgs.gov/search/map/Mercury/Messenger/Global/Mercury_MESSENGER_MDIS_Basemap_BDR_Mosaic_Global_166m) (using data from NASA's [MESSENGER](https://www.nasa.gov/mission_pages/messenger/main/index.html) mission)
-+ Venus: [USGS](https://astrogeology.usgs.gov/search/details/Venus/Magellan/Colorized/Venus_Magellan_C3-MDIR_Colorized_Global_Mosaic_4641m) (using data from NASA's [Magellan](http://solarsystem.nasa.gov/missions/magellan) mission)
-+ Earth: [NASA](https://visibleearth.nasa.gov/view_cat.php?categoryID=1484) (using data from NASA's [Terra](https://terra.nasa.gov/) satellite)
-+ Mars: [USGS](https://astrogeology.usgs.gov/search/map/Mars/Viking/MDIM21/Mars_Viking_MDIM21_ClrMosaic_global_232m) (using data from NASA's [Viking](https://www.nasa.gov/mission_pages/viking) mission)
-+ Pluto: [NASA](https://www.nasa.gov/image-feature/pluto-global-color-map) (using data from NASA's [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html) mission)
+Planetary imagery credits as follows:
++ Mercury: NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institution of Washington (using data from [MESSENGER](https://www.nasa.gov/mission_pages/messenger/main/index.html))
++ Venus: NASA / USGS Astrogeology Science Center (using data from [Magellan](http://solarsystem.nasa.gov/missions/magellan))
++ Earth: NASA (using data from [Terra](https://terra.nasa.gov/))
++ Mars: NASA / USGS Astrogeology Science Center (using data from [Viking](https://www.nasa.gov/mission_pages/viking))
++ Jupiter: NASA / Jet Propulsion Laboratory / Space Science Institute (using data from [Cassini](https://www.nasa.gov/mission_pages/cassini/main/index.html))
++ Saturn: *coming soon*
++ Uranus: *coming soon*
++ Neptune: *coming soon*
++ Pluto: NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute (using data from [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html))
 
 ## Links
 + [AR App](https://codemacabre.com/prj/planetaryar/app/ar.html) (use a browser which supports [supports WebGL and WebRTC](http://iswebrtcreadyyet.com/) and pointing your device's camera at [this marker](https://github.com/artoolkit/artoolkit5/blob/master/doc/patterns/Hiro%20pattern.pdf) to test)
