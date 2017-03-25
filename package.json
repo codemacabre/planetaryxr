@@ -1,7 +1,7 @@
 {
   "name": "planetaryar",
   "description": "AR / WebVR 3D maps of planetary bodies",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "scripts": {
     "start": "budo --live --verbose --port 3000 --open"
   },
