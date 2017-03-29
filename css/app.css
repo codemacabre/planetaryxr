@@ -1,0 +1,37 @@
+html, body {
+  overflow: hidden;
+}
+
+#prev-planet {
+  left: 1em;
+}
+#next-planet {
+  right: 1em;
+}
+.planet-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3em;
+  text-decoration: none;
+  border: none;
+  color: #ffffff;
+  z-index: 1;
+  transition: 100ms;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.planet-nav:hover {
+  color: #888888;
+  transition: 400ms;
+  opacity: 0.6;
+}
+/* MOBILE DEVICES */
+@media all and (max-width: 600px) {
+  #prev-planet {
+    left: 0.5em;
+  }
+  #next-planet {
+    right: 0.5em;
+  }
+}
