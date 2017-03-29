@@ -6,223 +6,70 @@
     <meta name="description" content="PlanetaryAR">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
     <!-- SCRIPTS -->
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
+    <script src="https://codemacabre.com/js/analytics.js" type="text/javascript"></script>
+    <script src="https://codemacabre.com/js/date.js" type="text/javascript"></script>
+    <script src="./js/vr.js" type="text/javascript"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js" type="text/javascript"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js" type="text/javascript"></script>
     <!-- STYLING -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,500" rel="stylesheet">
-    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/bde36a6fc9.css" rel="stylesheet">
+    <link href="https://codemacabre.com/css/style.css" rel="stylesheet" type="text/css">
+    <link href="./css/app.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <a id="nav-left" href="./index.html"></a>
-    <a-scene>
+    <a id="nav-left" href="./"><i class="fa fa-angle-left"></i> Back</a>
+    <i id="prev-planet" class="planet-nav fa fa-angle-left"></i>
+    <i id="next-planet" class="planet-nav fa fa-angle-right"></i>
+    <a-scene vr-mode-ui="enabled: false">
       <!-- Assets -->
       <a-assets>
-        <img id="basemapMercury" src="./img/mercury.jpg">
-        <img id="basemapVenus" src="./img/venus.jpg">
-        <img id="basemapEarth" src="./img/earth.jpg">
-        <img id="basemapMars" src="./img/mars.jpg">
-        <img id="basemapJupiter" src="./img/jupiter.jpg">
-        <!-- <img id="basemapSaturn" src="./img/saturn.jpg"> -->
-        <!-- <img id="basemapUranus" src="./img/uranus.jpg"> -->
-        <!-- <img id="basemapNeptune" src="./img/neptune.jpg"> -->
-        <img id="basemapPluto" src="./img/pluto.jpg">
+        <img id="txMercury" src="./img/mercury.jpg">
+        <img id="txVenus" src="./img/venus.jpg">
+        <img id="txEarth" src="./img/earth.jpg">
+        <img id="txMars" src="./img/mars.jpg">
+        <img id="txJupiter" src="./img/jupiter.jpg">
+        <!-- <img id="txSaturn" src="./img/saturn.jpg"> -->
+        <!-- <img id="txUranus" src="./img/uranus.jpg"> -->
+        <!-- <img id="txNeptune" src="./img/neptune.jpg"> -->
+        <img id="txPluto" src="./img/pluto.jpg">
       </a-assets>
 
       <!-- Camera & Cursor -->
       <a-entity
         id="camera"
         camera
-        position="0 0 4"
+        position="0 0 20"
         orbit-controls="
           autoRotate: false;
-          target: #target;
+          target: #current-planet;
           enableDamping: true;
           dampingFactor: 0.25;
           rotateSpeed: 0.14;
-          minDistance: 2.5;
+          minDistance: 0.3;
           maxDistance: 100;">
       </a-entity>
 
-      <!-- <a-entity
-        id="Mercury"
+      <!-- Planet -->
+      <a-entity
+        id="current-planet-container"
         rotation="0 0 0">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
+        <a-entity
+            animation="
+            property: rotation;
+            easing: linear;
+            dur: 60000;
+            to: 0 360 0;
+            loop: true;">
           <a-sphere
-            id="target"
-            src="#basemapMercury"
+            id="current-planet"
+            src=""
             position="0 0 0"
-            radius="2">
+            radius="1">
           </a-sphere>
         </a-entity>
       </a-entity>
-
-      <a-entity
-        id="Venus"
-        rotation="0 0 -2.6">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapVenus"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <a-entity
-        id="Earth"
-        rotation="0 0 -23.4">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapEarth"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <!-- <a-entity
-        id="Mars"
-        rotation="0 0 -25.2">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapMars"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity> -->
-
-      <a-entity
-        id="Jupiter"
-        rotation="0 0 -3.1">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapJupiter"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <!--
-      <a-entity
-        id="Saturn"
-        rotation="0 0 -26.7">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapSaturn"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <a-entity
-        id="Uranus"
-        rotation="0 0 -82.2">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapUranus"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <a-entity
-        id="Neptune"
-        rotation="0 0 -28.3">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapNeptune"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity>
-
-      <a-entity
-        id="Pluto"
-        rotation="0 0 -57.5">
-        <a-entity>
-          <a-animation
-            attribute="rotation"
-            easing="linear"
-            dur="60000"
-            to="0 360 0"
-            repeat="indefinite">
-          </a-animation>
-          <a-sphere
-            id="target"
-            src="#basemapPluto"
-            position="0 0 0"
-            radius="2">
-          </a-sphere>
-        </a-entity>
-      </a-entity> -->
 
       <a-sky color="#101013"></a-sky>
     </a-scene>
