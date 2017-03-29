@@ -7,9 +7,9 @@
 ## Overview
 [PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is an augmented reality (AR) web app featuring 3D models of planetary bodies, built using [A-Frame](https://a-frame.io/), [ARToolKit](https://artoolkit.org/) and the [AR.js](https://github.com/jeromeetienne/AR.js) library.
 
-Although primarily focused on creating an AR experience, PlanetaryAR also features a virtual reality (VR) variant which will build upon the 3D planetary models by offering a locational data and a lightweight map interface.
+Although primarily focused on creating an AR experience, PlanetaryAR also features a virtual reality (VR) mode which will build upon the 3D planetary models by offering a locational data and a lightweight map interface.
 
-To test the AR and VR apps, visit the [links](#links) sections below.
+Both AR and VR apps are currently in very early development.
 
 ## Resources
 Planetary imagery credits as follows:
@@ -24,8 +24,8 @@ Planetary imagery credits as follows:
 + Pluto: NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute (using data from [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html))
 
 ## Links
-+ [AR App](https://codemacabre.com/prj/planetaryar/app/ar.html) (use a browser which supports [supports WebGL and WebRTC](http://iswebrtcreadyyet.com/) and pointing your device's camera at [this marker](https://github.com/artoolkit/artoolkit5/blob/master/doc/patterns/Hiro%20pattern.pdf) to test)
-+ [VR App](https://codemacabre.com/prj/planetaryar/app/vr.html)
++ [Website](https://codemacabre.com/prj/planetaryar)
++ [Web App](https://codemacabre.com/prj/planetaryar/app)
 
 ## License
-PlanetaryAR is open source, licensed under the [MIT license](https://github.com/CodeMacabre/marsar/blob/master/LICENSE.md).
+PlanetaryAR is open source, licensed under the [MIT license](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md).
