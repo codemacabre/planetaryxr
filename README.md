@@ -24,8 +24,8 @@ Planetary imagery credits as follows:
 + Pluto: NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute (using data from [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html))
 
 ## Links
-+ [Website](https://codemacabre.com/prj/planetaryar)
-+ [Web App](https://codemacabre.com/prj/planetaryar/app)
++ [Website](http://planetaryar.codemacabre.com/)
++ [Project info](https://codemacabre.com/prj/planetaryar)
 
 ## License
 PlanetaryAR is open source, licensed under the [MIT license](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md).
