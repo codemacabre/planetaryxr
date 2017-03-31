@@ -25,15 +25,20 @@
     <a-scene vr-mode-ui="enabled: false">
       <!-- Assets -->
       <a-assets>
+        <!-- Planets -->
         <img id="txMercury" src="./img/mercury.jpg">
         <img id="txVenus" src="./img/venus.jpg">
         <img id="txEarth" src="./img/earth.jpg">
         <img id="txMars" src="./img/mars.jpg">
         <img id="txJupiter" src="./img/jupiter.jpg">
-        <!-- <img id="txSaturn" src="./img/saturn.jpg"> -->
-        <!-- <img id="txUranus" src="./img/uranus.jpg"> -->
-        <!-- <img id="txNeptune" src="./img/neptune.jpg"> -->
+        <img id="txSaturn" src="./img/saturn.jpg">
+        <img id="txUranus" src="./img/uranus.jpg">
+        <img id="txNeptune" src="./img/neptune.jpg">
         <img id="txPluto" src="./img/pluto.jpg">
+
+        <!-- Rings -->
+        <!-- <img id="txSaturnRing" src="./img/saturnring.jpg">
+        <img id="txUranusRing" src="./img/uranusring.jpg"> -->
       </a-assets>
 
       <!-- Camera & Cursor -->
@@ -56,7 +61,8 @@
         id="current-planet-container"
         rotation="0 0 0">
         <a-entity
-            animation="
+          id="current-planet-rotation"
+          animation="
             property: rotation;
             easing: linear;
             dur: 60000;
@@ -68,6 +74,20 @@
             position="0 0 0"
             radius="1">
           </a-sphere>
+          <a-ring
+            id="ring-top"
+            rotation="90, 0, 0"
+            radius-outer="11.6"
+            radius-inner="21.6"
+            visible="false">
+          </a-ring>
+          <a-ring
+            id="ring-bottom"
+            rotation="-90, 0, 0"
+            radius-outer="11.6"
+            radius-inner="21.6"
+            visible="false">
+          </a-ring>
         </a-entity>
       </a-entity>
 
