@@ -6,17 +6,16 @@
     <meta name="description" content="PlanetaryAR">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
     <!-- SCRIPTS -->
-    <script src="https://codemacabre.com/js/analytics.js" type="text/javascript"></script>
-    <script src="https://codemacabre.com/js/date.js" type="text/javascript"></script>
-    <script src="./js/vr.js" type="text/javascript"></script>
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js" type="text/javascript"></script>
-    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js" type="text/javascript"></script>
-    <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js" type="text/javascript"></script>
+    <script src="https://codemacabre.com/js/script.js"></script>
+    <script src="./js/vr.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@^3.2.0/dist/aframe-animation-component.min.js"></script>
     <!-- STYLING -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,500" rel="stylesheet">
     <link href="https://use.fontawesome.com/bde36a6fc9.css" rel="stylesheet">
-    <link href="https://codemacabre.com/css/style.css" rel="stylesheet" type="text/css">
-    <link href="./css/app.css" rel="stylesheet" type="text/css">
+    <link href="https://codemacabre.com/css/style.css" rel="stylesheet">
+    <link href="./css/app.css" rel="stylesheet">
   </head>
   <body>
     <a id="nav-left" href="./"><i class="fa fa-angle-left"></i> Back</a>
@@ -37,15 +36,16 @@
         <img id="txPluto" src="./img/pluto.jpg">
 
         <!-- Rings -->
-        <!-- <img id="txSaturnRing" src="./img/saturnring.jpg">
-        <img id="txUranusRing" src="./img/uranusring.jpg"> -->
+        <!-- <img id="txSaturnRing" src="./img/saturn-ring.png"> -->
+        <!-- <img id="txUranusRing" src="./img/uranus-ring.jpg"> -->
+        <!-- <img id="txUranusRing" src="./img/neptune-ring.jpg"> -->
       </a-assets>
 
       <!-- Camera & Cursor -->
       <a-entity
         id="camera"
         camera
-        position="0 0 20"
+        position="0 0 1000"
         orbit-controls="
           autoRotate: false;
           target: #current-planet;
@@ -53,7 +53,7 @@
           dampingFactor: 0.25;
           rotateSpeed: 0.14;
           minDistance: 0.3;
-          maxDistance: 100;">
+          maxDistance: 1000;">
       </a-entity>
 
       <!-- Planet -->
@@ -62,6 +62,7 @@
         rotation="0 0 0">
         <a-entity
           id="current-planet-rotation"
+          rotation="0 0 0"
           animation="
             property: rotation;
             easing: linear;
@@ -77,15 +78,13 @@
           <a-ring
             id="ring-top"
             rotation="90, 0, 0"
-            radius-outer="11.6"
-            radius-inner="21.6"
+            radius="0"
             visible="false">
           </a-ring>
           <a-ring
             id="ring-bottom"
             rotation="-90, 0, 0"
-            radius-outer="11.6"
-            radius-inner="21.6"
+            radius="0"
             visible="false">
           </a-ring>
         </a-entity>
