@@ -25,6 +25,9 @@
     <a-scene vr-mode-ui="enabled: false">
       <!-- Assets -->
       <a-assets>
+        <!-- Stars -->
+        <img id="txStarMap" src="./img/star-map.jpg">
+
         <!-- Planets -->
         <img id="txMercury" src="./img/mercury.jpg">
         <img id="txVenus" src="./img/venus.jpg">
@@ -91,7 +94,7 @@
         </a-entity>
       </a-entity>
 
-      <a-sky color="#101013"></a-sky>
+      <a-sky src="#txStarMap"></a-sky>
     </a-scene>
   </body>
 </html>

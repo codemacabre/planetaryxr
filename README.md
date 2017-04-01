@@ -12,7 +12,8 @@ Although primarily focused on creating an AR experience, PlanetaryAR also featur
 Both AR and VR apps are currently in very early development.
 
 ## Resources
-Planetary imagery credits as follows:
+Imagery credits as follows:
++ Star map: David Seal / Yale (modified)
 + Mercury: NASA / Johns Hopkins University Applied Physics Laboratory / Carnegie Institution of Washington (using data from [MESSENGER](https://www.nasa.gov/mission_pages/messenger/main/index.html))
 + Venus: NASA / USGS Astrogeology Science Center (using data from [Magellan](http://solarsystem.nasa.gov/missions/magellan))
 + Earth: NASA (using data from [Terra](https://terra.nasa.gov/))
