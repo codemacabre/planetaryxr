@@ -6,7 +6,6 @@
     <meta name="description" content="PlanetaryAR">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
     <!-- SCRIPTS -->
-    <script src="https://codemacabre.com/js/script.js"></script>
     <script src="./js/vr.js"></script>
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/tizzle/aframe-orbit-controls-component/master/dist/aframe-orbit-controls-component.min.js"></script>
@@ -18,83 +17,91 @@
     <link href="./css/app.css" rel="stylesheet">
   </head>
   <body>
-    <a id="nav-left" href="./"><i class="fa fa-angle-left"></i> Back</a>
-    <div id="controls">
-      <i id="prev-planet" class="planet-nav fa fa-angle-left"></i><span id="planet-name"></span><i id="next-planet" class="planet-nav fa fa-angle-right"></i>
+    <div id="load-overlay">
+      <div id="loader">
+        <i class="fa fa-spinner fa-pulse fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
-    <a-scene vr-mode-ui="enabled: false">
-      <!-- Assets -->
-      <a-assets>
-        <!-- Stars -->
-        <img id="txStarMap" src="./img/star-map.jpg">
+    <div id="app">
+      <a id="nav-left" href="./"><i class="fa fa-angle-left"></i> Back</a>
+      <div id="controls">
+        <i id="prev-planet" class="planet-nav fa fa-angle-left"></i><span id="planet-name"></span><i id="next-planet" class="planet-nav fa fa-angle-right"></i>
+      </div>
+      <a-scene vr-mode-ui="enabled: false">
+        <!-- Assets -->
+        <a-assets>
+          <!-- Stars -->
+          <img id="txStarMap" src="./img/star-map.jpg">
 
-        <!-- Planets -->
-        <img id="txMercury" src="./img/mercury.jpg">
-        <img id="txVenus" src="./img/venus.jpg">
-        <img id="txEarth" src="./img/earth.jpg">
-        <img id="txMars" src="./img/mars.jpg">
-        <img id="txJupiter" src="./img/jupiter.jpg">
-        <img id="txSaturn" src="./img/saturn.jpg">
-        <img id="txUranus" src="./img/uranus.jpg">
-        <img id="txNeptune" src="./img/neptune.jpg">
-        <img id="txPluto" src="./img/pluto.jpg">
+          <!-- Planets -->
+          <img id="txMercury" src="./img/mercury.jpg">
+          <img id="txVenus" src="./img/venus.jpg">
+          <img id="txEarth" src="./img/earth.jpg">
+          <img id="txMars" src="./img/mars.jpg">
+          <img id="txJupiter" src="./img/jupiter.jpg">
+          <img id="txSaturn" src="./img/saturn.jpg">
+          <img id="txUranus" src="./img/uranus.jpg">
+          <img id="txNeptune" src="./img/neptune.jpg">
+          <img id="txPluto" src="./img/pluto.jpg">
 
-        <!-- Rings -->
-        <!-- <img id="txSaturnRing" src="./img/saturn-ring.png"> -->
-        <!-- <img id="txUranusRing" src="./img/uranus-ring.jpg"> -->
-        <!-- <img id="txUranusRing" src="./img/neptune-ring.jpg"> -->
-      </a-assets>
+          <!-- Rings -->
+          <!-- <img id="txSaturnRing" src="./img/saturn-ring.png"> -->
+          <!-- <img id="txUranusRing" src="./img/uranus-ring.jpg"> -->
+          <!-- <img id="txUranusRing" src="./img/neptune-ring.jpg"> -->
+        </a-assets>
 
-      <!-- Camera & Cursor -->
-      <a-entity
-        id="camera"
-        camera
-        position="0 0 1000"
-        orbit-controls="
-          autoRotate: false;
-          target: #current-planet;
-          enableDamping: true;
-          dampingFactor: 0.25;
-          rotateSpeed: 0.14;
-          minDistance: 0.3;
-          maxDistance: 1000;">
-      </a-entity>
-
-      <!-- Planet -->
-      <a-entity
-        id="current-planet-container"
-        rotation="0 0 0">
+        <!-- Camera & Cursor -->
         <a-entity
-          id="current-planet-rotation"
-          rotation="0 0 0"
-          animation="
-            property: rotation;
-            easing: linear;
-            dur: 60000;
-            to: 0 360 0;
-            loop: true;">
-          <a-sphere
-            id="current-planet"
-            src=""
-            position="0 0 0"
-            radius="1">
-          </a-sphere>
-          <a-ring
-            id="ring-top"
-            rotation="90, 0, 0"
-            radius="0"
-            visible="false">
-          </a-ring>
-          <a-ring
-            id="ring-bottom"
-            rotation="-90, 0, 0"
-            radius="0"
-            visible="false">
-          </a-ring>
+          id="camera"
+          camera
+          position="0 0 1000"
+          orbit-controls="
+            autoRotate: false;
+            target: #current-planet;
+            enableDamping: true;
+            dampingFactor: 0.25;
+            rotateSpeed: 0.14;
+            minDistance: 0.3;
+            maxDistance: 1000;">
         </a-entity>
-      </a-entity>
 
-      <a-sky src="#txStarMap"></a-sky>
-    </a-scene>
+        <!-- Planet -->
+        <a-entity
+          id="current-planet-container"
+          rotation="0 0 0">
+          <a-entity
+            id="current-planet-rotation"
+            rotation="0 0 0"
+            animation="
+              property: rotation;
+              easing: linear;
+              dur: 60000;
+              to: 0 360 0;
+              loop: true;">
+            <a-sphere
+              id="current-planet"
+              src=""
+              position="0 0 0"
+              radius="1">
+            </a-sphere>
+            <a-ring
+              id="ring-top"
+              rotation="90, 0, 0"
+              radius="0"
+              visible="false">
+            </a-ring>
+            <a-ring
+              id="ring-bottom"
+              rotation="-90, 0, 0"
+              radius="0"
+              visible="false">
+            </a-ring>
+          </a-entity>
+        </a-entity>
+
+        <a-sky src="#txStarMap"></a-sky>
+      </a-scene>
+    </div>
   </body>
 </html>

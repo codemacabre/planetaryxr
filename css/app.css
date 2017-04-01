@@ -1,6 +1,30 @@
 html, body {
   overflow: hidden;
 }
+#app {
+  display: none;
+}
+#load-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  background: #101013;
+  z-index: 9999;
+}
+#loader i {
+  text-align: center;
+  margin: -0.5em 0 0 -0.5em;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 5em;
+}
 #prev-planet {
   position: absolute;
   left: 1em;
@@ -30,17 +54,28 @@ html, body {
   font-size: 3em;
   text-decoration: none;
   border: none;
-  color: #ffffff;
+  color: #aaaaaa;
 
   transition: 100ms;
   opacity: 0.8;
   cursor: pointer;
 }
 .planet-nav:hover {
-  color: #888888;
+  color: #ffffff;
   transition: 400ms;
   opacity: 0.6;
 }
+#footer {
+  z-index: 9999;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  margin: -3em 0 0 0;
+  text-align: center;
+  font-size: 3em;
+}
+
 /* MOBILE DEVICES */
 @media all and (max-width: 600px) {
   #controls {

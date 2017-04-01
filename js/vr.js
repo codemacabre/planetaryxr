@@ -1,3 +1,13 @@
+var loader;
+document.addEventListener("DOMContentLoaded", function(e) {
+  loader = setTimeout(showPage, 4000);
+
+  function showPage() {
+    document.getElementById("load-overlay").style.display = "none";
+    document.getElementById("app").style.display = "block";
+  }
+});
+
 window.onload = function() {
   var totalPlanets = 9; // Update this as more planets are added
   var planetPicker = 0; // Start with Mercury
