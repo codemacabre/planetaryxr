@@ -1,22 +1,37 @@
 html, body {
   overflow: hidden;
 }
-
 #prev-planet {
+  position: absolute;
   left: 1em;
 }
 #next-planet {
+  position: absolute;
   right: 1em;
 }
-.planet-nav {
+#planet-name {
+  position: relative;
+  top: 0.5em;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffffff;
+}
+#controls {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  bottom: 3em;
+  transform: translateX(-50%);
+  min-width: 320px;
+  z-index: 1;
+  text-align: center;
+}
+.planet-nav {
   font-size: 3em;
   text-decoration: none;
   border: none;
   color: #ffffff;
-  z-index: 1;
+
   transition: 100ms;
   opacity: 0.8;
   cursor: pointer;
@@ -28,6 +43,9 @@ html, body {
 }
 /* MOBILE DEVICES */
 @media all and (max-width: 600px) {
+  #controls {
+    bottom: 2.5em;
+  }
   #prev-planet {
     left: 0.5em;
   }

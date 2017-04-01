@@ -15,6 +15,7 @@ window.onload = function() {
   const currentPlanetContainer = document.getElementById('current-planet-container');
   const currentPlanetRotation = document.getElementById('current-planet-rotation');
   const currentPlanet = document.getElementById('current-planet');
+  const currentPlanetName = document.getElementById('planet-name');
   const ringA = document.getElementById('ring-top');
   const ringB = document.getElementById('ring-bottom');
 
@@ -22,6 +23,7 @@ window.onload = function() {
     switch (planet) {
       case 0:
         console.log('Setting planet to Mercury');
+        currentPlanetName.innerHTML = 'Mercury';
         currentPlanetContainer.setAttribute('rotation', '0, 0, 0');
         // currentPlanetRotation.setAttribute('animation.dur', '140760');
         currentPlanet.setAttribute('src', '#txMercury');
@@ -33,6 +35,7 @@ window.onload = function() {
         break;
       case 1:
         console.log('Setting planet to Venus');
+        currentPlanetName.innerHTML = 'Venus';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -2.6');
         // currentPlanetRotation.setAttribute('animation.dur', '583260');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
@@ -45,6 +48,7 @@ window.onload = function() {
         break;
       case 2:
         console.log('Setting planet to Earth');
+        currentPlanetName.innerHTML = 'Earth';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -23.4');
         // currentPlanetRotation.setAttribute('animation.dur', '2393');
         currentPlanet.setAttribute('src', '#txEarth');
@@ -56,6 +60,7 @@ window.onload = function() {
         break;
       case 3:
         console.log('Setting planet to Mars');
+        currentPlanetName.innerHTML = 'Mars';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -25.2');
         // currentPlanetRotation.setAttribute('animation.dur', '2462');
         currentPlanet.setAttribute('src', '#txMars');
@@ -67,6 +72,7 @@ window.onload = function() {
         break;
       case 4:
         console.log('Setting planet to Jupiter');
+        currentPlanetName.innerHTML = 'Jupiter';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -3.13');
         // currentPlanetRotation.setAttribute('animation.dur', '993');
         currentPlanet.setAttribute('src', '#txJupiter');
@@ -78,6 +84,7 @@ window.onload = function() {
         break;
       case 5:
         console.log('Setting planet to Saturn');
+        currentPlanetName.innerHTML = 'Saturn';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -26.7');
         // currentPlanetRotation.setAttribute('animation.dur', '1066');
         currentPlanet.setAttribute('src', '#txSaturn');
@@ -89,6 +96,7 @@ window.onload = function() {
         break;
       case 6:
         console.log('Setting planet to Uranus');
+        currentPlanetName.innerHTML = 'Uranus';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -82.2');
         // currentPlanetRotation.setAttribute('animation.dur', '1724');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
@@ -101,6 +109,7 @@ window.onload = function() {
         break;
       case 7:
         console.log('Setting planet to Neptune');
+        currentPlanetName.innerHTML = 'Neptune';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -28.3');
         currentPlanetRotation.setAttribute('animation.dur', '1611');
         currentPlanet.setAttribute('src', '#txNeptune');
@@ -112,6 +121,7 @@ window.onload = function() {
         break;
       case 8:
         console.log('Setting planet to Pluto');
+        currentPlanetName.innerHTML = 'Pluto ';
         currentPlanetContainer.setAttribute('rotation', '0, 0, -57.5');
         // currentPlanetRotation.setAttribute('animation.dur', '15329;');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
