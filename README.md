@@ -7,6 +7,8 @@
 ## Overview
 [PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is an augmented reality (AR) web app featuring 3D models of planetary bodies, built using [A-Frame](https://a-frame.io/), [ARToolKit](https://artoolkit.org/) and the [AR.js](https://github.com/jeromeetienne/AR.js) library.
 
+AR markers can be downloaded [here](./marker-v0.1.5.pdf).
+
 Although primarily focused on creating an AR experience, PlanetaryAR also features a virtual reality (VR) mode which will build upon the 3D planetary models by offering a locational data and a lightweight map interface.
 
 Both AR and VR apps are currently in very early development.
