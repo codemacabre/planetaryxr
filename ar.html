@@ -19,35 +19,218 @@
     <a-scene embedded artoolkit="sourceType: webcam;">
       <!-- Assets -->
       <a-assets>
-        <img id="basemapMars" src="./img/mars.jpg">
-        <img id="basemapMercury" src="./img/mercury.jpg">
-        <img id="basemapPluto" src="./img/pluto.jpg">
-        <img id="basemapVenus" src="./img/venus.jpg">
+        <!-- Planets -->
+        <img id="txMercury" src="./img/mercury.jpg">
+        <img id="txVenus" src="./img/venus.jpg">
+        <img id="txEarth" src="./img/earth.jpg">
+        <img id="txMars" src="./img/mars.jpg">
+        <img id="txJupiter" src="./img/jupiter.jpg">
+        <img id="txSaturn" src="./img/saturn.jpg">
+        <img id="txUranus" src="./img/uranus.jpg">
+        <img id="txNeptune" src="./img/neptune.jpg">
+        <img id="txPluto" src="./img/pluto.jpg">
+
+        <!-- Rings -->
+        <!-- <img id="txSaturnRing" src="./img/saturn-ring.png"> -->
+        <!-- <img id="txUranusRing" src="./img/uranus-ring.jpg"> -->
+        <!-- <img id="txUranusRing" src="./img/neptune-ring.jpg"> -->
       </a-assets>
 
-        <!-- Planet -->
-        <a-entity
-          position="0 1 0"
-          rotation="0 0 25"
-          scale="0.5 0.5 0.5">
-          <a-entity>
-            <a-animation
-              attribute="rotation"
-              easing="linear"
-              dur="60000"
-              to="0 360 0"
-              repeat="indefinite">
-            </a-animation>
+        <!-- Mercury -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/mercury.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -2.04">
             <a-sphere
-              id="target"
-              src="#basemapMars"
+              id="current-planet"
+              src="#txMercury"
               position="0 0 0"
-              radius="2">
+              radius="1"
+              scale="0.5 0.5 0.5">
             </a-sphere>
           </a-entity>
-        </a-entity>
-      <!-- <a-entity camera></a-entity> -->
-      <a-marker-camera preset='hiro'></a-marker-camera>
+        </a-marker>
+
+        <!-- Venus -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/venus.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -2.6">
+            <a-sphere
+              id="current-planet"
+              src="#txVenus"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+          </a-entity>
+        </a-marker>
+
+        <!-- Earth -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/earth.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -23.4">
+            <a-sphere
+              id="current-planet"
+              src="#txEarth"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+          </a-entity>
+        </a-marker>
+
+        <!-- Mars -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/mars.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -25.2">
+            <a-sphere
+              id="current-planet"
+              src="#txMars"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+          </a-entity>
+        </a-marker>
+
+        <!-- Jupiter -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/jupiter.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -3.13">
+            <a-sphere
+              id="current-planet"
+              src="#txJupiter"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+          </a-entity>
+        </a-marker>
+
+        <!-- Saturn -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/saturn.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -26.7">
+            <a-sphere
+              id="current-planet"
+              src="#txSaturn"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.45 0.5">
+            </a-sphere>
+            <a-ring
+              id="ring-top"
+              rotation="90, 0, 0"
+              radius-inner="1.3"
+              radius-outer="2.4"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+            <a-ring
+              id="ring-bottom"
+              rotation="-90, 0, 0"
+              radius-inner="1.3"
+              radius-outer="2.4"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+          </a-entity>
+        </a-marker>
+
+        <!-- Uranus -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/uranus.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -82.2">
+            <a-sphere
+              id="current-planet"
+              src="#txUranus"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+            <a-ring
+              id="ring-top"
+              rotation="90, 0, 0"
+              radius-inner="1.5"
+              radius-outer="3.9"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+            <a-ring
+              id="ring-bottom"
+              rotation="-90, 0, 0"
+              radius-inner="1.5"
+              radius-outer="3.9"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+          </a-entity>
+        </a-marker>
+
+        <!-- Neptune -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/neptune.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -28.3">
+            <a-sphere
+              id="current-planet"
+              src="#txNeptune"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+            <a-ring
+              id="ring-top"
+              rotation="90, 0, 0"
+              radius-inner="1.7"
+              radius-outer="2.6"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+            <a-ring
+              id="ring-bottom"
+              rotation="-90, 0, 0"
+              radius-inner="1.7"
+              radius-outer="2.6"
+              scale="0.5 0.5 0.5">
+            </a-ring>
+          </a-entity>
+        </a-marker>
+
+        <!-- Pluto -->
+        <a-marker
+          type="pattern"
+          url="./img/markers/pluto.pat">
+          <a-entity
+            id="current-planet-container"
+            rotation="270 0 -57.5">
+            <a-sphere
+              id="current-planet"
+              src="#txPluto"
+              position="0 0 0"
+              radius="1"
+              scale="0.5 0.5 0.5">
+            </a-sphere>
+          </a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
     </a-scene>
   </body>
 </html>
