@@ -34,11 +34,11 @@ window.onload = function() {
       case 0:
         console.log('Setting planet to Mercury');
         currentPlanetName.innerHTML = 'Mercury';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, 0');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -2.04');
         // currentPlanetRotation.setAttribute('animation.dur', '140760');
         currentPlanet.setAttribute('src', '#txMercury');
         currentPlanet.setAttribute('radius', '2.440');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 12';
         zoomToFit();
@@ -46,12 +46,12 @@ window.onload = function() {
       case 1:
         console.log('Setting planet to Venus');
         currentPlanetName.innerHTML = 'Venus';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -2.6');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -2.6');
         // currentPlanetRotation.setAttribute('animation.dur', '583260');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
         currentPlanet.setAttribute('src', '#txVenus');
         currentPlanet.setAttribute('radius', '6.052');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 30';
         zoomToFit();
@@ -59,11 +59,11 @@ window.onload = function() {
       case 2:
         console.log('Setting planet to Earth');
         currentPlanetName.innerHTML = 'Earth';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -23.4');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -23.4');
         // currentPlanetRotation.setAttribute('animation.dur', '2393');
         currentPlanet.setAttribute('src', '#txEarth');
         currentPlanet.setAttribute('radius', '6.371');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 32';
         zoomToFit();
@@ -71,11 +71,11 @@ window.onload = function() {
       case 3:
         console.log('Setting planet to Mars');
         currentPlanetName.innerHTML = 'Mars';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -25.2');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -25.2');
         // currentPlanetRotation.setAttribute('animation.dur', '2462');
         currentPlanet.setAttribute('src', '#txMars');
         currentPlanet.setAttribute('radius', '3.390');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 18';
         zoomToFit();
@@ -83,11 +83,11 @@ window.onload = function() {
       case 4:
         console.log('Setting planet to Jupiter');
         currentPlanetName.innerHTML = 'Jupiter';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -3.13');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -3.13');
         // currentPlanetRotation.setAttribute('animation.dur', '993');
         currentPlanet.setAttribute('src', '#txJupiter');
         currentPlanet.setAttribute('radius', '69.911');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 350';
         zoomToFit();
@@ -95,11 +95,11 @@ window.onload = function() {
       case 5:
         console.log('Setting planet to Saturn');
         currentPlanetName.innerHTML = 'Saturn';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -26.7');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -26.7');
         // currentPlanetRotation.setAttribute('animation.dur', '1066');
         currentPlanet.setAttribute('src', '#txSaturn');
         currentPlanet.setAttribute('radius', '58.232');
-        currentPlanet.setAttribute('scale', '1, 0.9, 1');
+        currentPlanet.setAttribute('scale', '1 0.9 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 265';
         zoomToFit();
@@ -107,12 +107,12 @@ window.onload = function() {
       case 6:
         console.log('Setting planet to Uranus');
         currentPlanetName.innerHTML = 'Uranus';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -82.2');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -82.2');
         // currentPlanetRotation.setAttribute('animation.dur', '1724');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
         currentPlanet.setAttribute('src', '#txUranus');
         currentPlanet.setAttribute('radius', '25.362');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 130';
         zoomToFit();
@@ -120,11 +120,11 @@ window.onload = function() {
       case 7:
         console.log('Setting planet to Neptune');
         currentPlanetName.innerHTML = 'Neptune';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -28.3');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -28.3');
         currentPlanetRotation.setAttribute('animation.dur', '1611');
         currentPlanet.setAttribute('src', '#txNeptune');
         currentPlanet.setAttribute('radius', '24.622');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 125';
         zoomToFit();
@@ -132,12 +132,12 @@ window.onload = function() {
       case 8:
         console.log('Setting planet to Pluto');
         currentPlanetName.innerHTML = 'Pluto ';
-        currentPlanetContainer.setAttribute('rotation', '0, 0, -57.5');
+        currentPlanetContainer.setAttribute('rotation', '0 0 -57.5');
         // currentPlanetRotation.setAttribute('animation.dur', '15329;');
         // currentPlanetRotation.setAttribute('animation.dir', 'reverse');
         currentPlanet.setAttribute('src', '#txPluto');
         currentPlanet.setAttribute('radius', '1.186');
-        currentPlanet.setAttribute('scale', '1, 1, 1');
+        currentPlanet.setAttribute('scale', '1 1 1');
         tempCamZoom = camZoom;
         camZoom = '0 0 6';
         zoomToFit();
