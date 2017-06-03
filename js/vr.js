@@ -121,7 +121,7 @@ window.onload = function() {
         console.log('Setting planet to Neptune');
         currentPlanetName.innerHTML = 'Neptune';
         currentPlanetContainer.setAttribute('rotation', '0 0 -28.3');
-        currentPlanetRotation.setAttribute('animation.dur', '1611');
+        // currentPlanetRotation.setAttribute('animation.dur', '1611');
         currentPlanet.setAttribute('src', '#txNeptune');
         currentPlanet.setAttribute('radius', '24.622');
         currentPlanet.setAttribute('scale', '1 1 1');
@@ -151,35 +151,42 @@ window.onload = function() {
        // Saturn
       ringA.setAttribute('visible', 'true');
       ringB.setAttribute('visible', 'true');
-
-      // ringA.setAttribute('src', '#txSaturnRing');
-      // ringB.setAttribute('src', '#txSaturnRing');
-      ringA.setAttribute('radius-inner', '74.5');
-      ringB.setAttribute('radius-inner', '74.5');
-      ringA.setAttribute('radius-outer', '140.22');
-      ringB.setAttribute('radius-outer', '140.22');
-    } else if(planetPicker === 6) {
-      // Uranus
-      ringA.setAttribute('visible', 'true');
-      ringB.setAttribute('visible', 'true');
-
-      // ringA.setAttribute('src', '#txUranusRing');
-      // ringB.setAttribute('src', '#txUranusRing');
-      ringA.setAttribute('radius-inner', '38');
-      ringB.setAttribute('radius-inner', '38');
-      ringA.setAttribute('radius-outer', '98');
-      ringB.setAttribute('radius-outer', '98');
-    } else if(planetPicker === 7) {
-      // Neptune
-      ringA.setAttribute('visible', 'true');
-      ringB.setAttribute('visible', 'true');
-
-      // ringA.setAttribute('src', '#txNeptuneRing');
-      // ringB.setAttribute('src', '#txNeptuneRing');
-      ringA.setAttribute('radius-inner', '40.9');
-      ringB.setAttribute('radius-inner', '40.9');
-      ringA.setAttribute('radius-outer', '62.932');
-      ringB.setAttribute('radius-outer', '62.932');
+      // radius-inner="1.3"
+      // radius-outer="2.4"
+      ringA.setAttribute('src', '#txSaturnRing');
+      ringB.setAttribute('src', '#txSaturnRing');
+      ringA.setAttribute('width', '400');
+      ringB.setAttribute('width', '400');
+      ringA.setAttribute('height', '400');
+      ringB.setAttribute('height', '400');
+      // ringA.setAttribute('radius-inner', '74.5');
+      // ringB.setAttribute('radius-inner', '74.5');
+      // ringA.setAttribute('radius-outer', '140.22');
+      // ringB.setAttribute('radius-outer', '140.22');
+    // } else if(planetPicker === 6) {
+    //   // Uranus
+    //   ringA.setAttribute('visible', 'true');
+    //   ringB.setAttribute('visible', 'true');
+    //   // radius-inner="1.5"
+    //   // radius-outer="3.9"
+    //   ringA.setAttribute('src', '#txUranusRing');
+    //   ringB.setAttribute('src', '#txUranusRing');
+    //   ringA.setAttribute('radius-inner', '38');
+    //   ringB.setAttribute('radius-inner', '38');
+    //   ringA.setAttribute('radius-outer', '98');
+    //   ringB.setAttribute('radius-outer', '98');
+    // } else if(planetPicker === 7) {
+    //   // Neptune
+    //   ringA.setAttribute('visible', 'true');
+    //   ringB.setAttribute('visible', 'true');
+    //   // radius-inner="1.7"
+    //   // radius-outer="2.6"
+    //   ringA.setAttribute('src', '#txNeptuneRing');
+    //   ringB.setAttribute('src', '#txNeptuneRing');
+    //   ringA.setAttribute('radius-inner', '40.9');
+    //   ringB.setAttribute('radius-inner', '40.9');
+    //   ringA.setAttribute('radius-outer', '62.932');
+    //   ringB.setAttribute('radius-outer', '62.932');
     } else {
       ringA.setAttribute('visible', 'false');
       ringB.setAttribute('visible', 'false');
