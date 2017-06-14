@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
 window.onload = function() {
   var totalPlanets = 9; // Update this as more planets are added
-  var planetPicker = 0; // Start with Mercury
+  var planetPicker = 5; // Start with Saturn
   var tempCamZoom = '0 0 1000';
   var camZoom = '0 0 1000';
 
@@ -151,42 +151,32 @@ window.onload = function() {
        // Saturn
       ringA.setAttribute('visible', 'true');
       ringB.setAttribute('visible', 'true');
-      // radius-inner="1.3"
-      // radius-outer="2.4"
       ringA.setAttribute('src', '#txSaturnRing');
       ringB.setAttribute('src', '#txSaturnRing');
-      ringA.setAttribute('width', '400');
-      ringB.setAttribute('width', '400');
-      ringA.setAttribute('height', '400');
-      ringB.setAttribute('height', '400');
-      // ringA.setAttribute('radius-inner', '74.5');
-      // ringB.setAttribute('radius-inner', '74.5');
-      // ringA.setAttribute('radius-outer', '140.22');
-      // ringB.setAttribute('radius-outer', '140.22');
+      ringA.setAttribute('width', '280.44');
+      ringB.setAttribute('width', '280.44');
+      ringA.setAttribute('height', '280.44');
+      ringB.setAttribute('height', '280.44');
     // } else if(planetPicker === 6) {
     //   // Uranus
     //   ringA.setAttribute('visible', 'true');
     //   ringB.setAttribute('visible', 'true');
-    //   // radius-inner="1.5"
-    //   // radius-outer="3.9"
     //   ringA.setAttribute('src', '#txUranusRing');
     //   ringB.setAttribute('src', '#txUranusRing');
-    //   ringA.setAttribute('radius-inner', '38');
-    //   ringB.setAttribute('radius-inner', '38');
-    //   ringA.setAttribute('radius-outer', '98');
-    //   ringB.setAttribute('radius-outer', '98');
+    //   ringA.setAttribute('width', '196');
+    //   ringB.setAttribute('width', '196');
+    //   ringA.setAttribute('height', '196');
+    //   ringB.setAttribute('height', '196');
     // } else if(planetPicker === 7) {
     //   // Neptune
     //   ringA.setAttribute('visible', 'true');
     //   ringB.setAttribute('visible', 'true');
-    //   // radius-inner="1.7"
-    //   // radius-outer="2.6"
     //   ringA.setAttribute('src', '#txNeptuneRing');
     //   ringB.setAttribute('src', '#txNeptuneRing');
-    //   ringA.setAttribute('radius-inner', '40.9');
-    //   ringB.setAttribute('radius-inner', '40.9');
-    //   ringA.setAttribute('radius-outer', '62.932');
-    //   ringB.setAttribute('radius-outer', '62.932');
+    //   ringA.setAttribute('width', '125.864');
+    //   ringB.setAttribute('width', '125.864');
+    //   ringA.setAttribute('height', '125.864');
+    //   ringB.setAttribute('height', '125.864');
     } else {
       ringA.setAttribute('visible', 'false');
       ringB.setAttribute('visible', 'false');
@@ -201,7 +191,7 @@ window.onload = function() {
   function zoomToFit() {
     console.log('Zooming camera to fit (' + camZoom +')');
     camera.removeAttribute('animation');
-    camera.setAttribute('animation', 'property: position; dur: 2000; easing: easeInOutSine; from: ' + tempCamZoom + '; to: ' + camZoom + ';');
+    camera.setAttribute('animation', 'property: position; dur: 2000; easing: easeInOutSine; to: ' + camZoom + ';');
   }
 
   function prevPlanet() {
