@@ -26,8 +26,7 @@ window.onload = function() {
   const currentPlanetRotation = document.getElementById('current-planet-rotation');
   const currentPlanet = document.getElementById('current-planet');
   const currentPlanetName = document.getElementById('planet-name');
-  const ringA = document.getElementById('ring-top');
-  const ringB = document.getElementById('ring-bottom');
+  const ring = document.getElementById('ring');
 
   function setPlanet(planet) {
     switch (planet) {
@@ -149,42 +148,27 @@ window.onload = function() {
   function checkForRings() {
     if(planetPicker === 5) {
        // Saturn
-      ringA.setAttribute('visible', 'true');
-      ringB.setAttribute('visible', 'true');
-      ringA.setAttribute('src', '#txSaturnRing');
-      ringB.setAttribute('src', '#txSaturnRing');
-      ringA.setAttribute('width', '280.44');
-      ringB.setAttribute('width', '280.44');
-      ringA.setAttribute('height', '280.44');
-      ringB.setAttribute('height', '280.44');
+      ring.setAttribute('visible', 'true');
+      ring.setAttribute('src', '#txSaturnRing');
+      ring.setAttribute('width', '280.44');
+      ring.setAttribute('height', '280.44');
     // } else if(planetPicker === 6) {
     //   // Uranus
-    //   ringA.setAttribute('visible', 'true');
-    //   ringB.setAttribute('visible', 'true');
-    //   ringA.setAttribute('src', '#txUranusRing');
-    //   ringB.setAttribute('src', '#txUranusRing');
-    //   ringA.setAttribute('width', '196');
-    //   ringB.setAttribute('width', '196');
-    //   ringA.setAttribute('height', '196');
-    //   ringB.setAttribute('height', '196');
+    //   ring.setAttribute('visible', 'true');
+    //   ring.setAttribute('src', '#txUranusRing');
+    //   ring.setAttribute('width', '196');
+    //   ring.setAttribute('height', '196');
     // } else if(planetPicker === 7) {
     //   // Neptune
-    //   ringA.setAttribute('visible', 'true');
-    //   ringB.setAttribute('visible', 'true');
-    //   ringA.setAttribute('src', '#txNeptuneRing');
-    //   ringB.setAttribute('src', '#txNeptuneRing');
-    //   ringA.setAttribute('width', '125.864');
-    //   ringB.setAttribute('width', '125.864');
-    //   ringA.setAttribute('height', '125.864');
-    //   ringB.setAttribute('height', '125.864');
+    //   ring.setAttribute('visible', 'true');
+    //   ring.setAttribute('src', '#txNeptuneRing');
+    //   ring.setAttribute('width', '125.864');
+    //   ring.setAttribute('height', '125.864');
     } else {
-      ringA.setAttribute('visible', 'false');
-      ringB.setAttribute('visible', 'false');
+      ring.setAttribute('visible', 'false');
 
-      ringA.setAttribute('radius-inner', '0');
-      ringB.setAttribute('radius-inner', '0');
-      ringA.setAttribute('radius-outer', '0');
-      ringB.setAttribute('radius-outer', '0');
+      ring.setAttribute('radius-inner', '0');
+      ring.setAttribute('radius-outer', '0');
     }
   }
 
