@@ -22,8 +22,8 @@ Imagery credits as follows:
 + Mars: NASA / USGS Astrogeology Science Center (using data from [Viking](https://www.nasa.gov/mission_pages/viking))
 + Jupiter: NASA / Jet Propulsion Laboratory / Space Science Institute (using data from [Cassini](https://www.nasa.gov/mission_pages/cassini/main/index.html))
 + Saturn: Björn Jónsson (using data from [Cassini](https://www.nasa.gov/mission_pages/cassini/main/index.html) (planet) and [Voyager](https://www.nasa.gov/mission_pages/voyager/index.html) (rings), reproduced with permission)
-+ Uranus: James Hastings-Trew
-+ Neptune: Björn Jónsson (using data from (using data from [Voyager](https://www.nasa.gov/mission_pages/voyager/index.html), reproduced with permission)
++ Uranus: James Hastings-Trew (planet and rings)
++ Neptune: Björn Jónsson (using data from [Voyager](https://www.nasa.gov/mission_pages/voyager/index.html), reproduced with permission)
 + Pluto: NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute (using data from [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html))
 
 ## Links
