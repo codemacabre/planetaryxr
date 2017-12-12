@@ -1,15 +1,14 @@
-# PlanetaryAR
+# PlanetaryXR
 
-[![Codeship build](https://img.shields.io/codeship/93d279e0-eeea-0134-6d5c-62b847b8d86d/master.svg)](https://app.codeship.com/projects/208744)
 [![GitHub issues](https://img.shields.io/github/issues/codemacabre/planetaryar.svg)](https://github.com/codemacabre/planetaryar/issues)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md)
 
 ## Overview
-[PlanetaryAR](http://codemacabre.com/prj/planetaryar/) is an augmented reality (AR) web app featuring 3D models of planetary bodies, built using [A-Frame](https://a-frame.io/), [ARToolKit](https://artoolkit.org/) and the [AR.js](https://github.com/jeromeetienne/AR.js) library.
+[PlanetaryXR](http://codemacabre.com/prj/planetaryxr/) (formerly PlanetaryAR) is an augmented reality (AR) / virtual reality (VR) web app featuring 3D models of planetary bodies, built using [A-Frame](https://a-frame.io/), [ARToolKit](https://artoolkit.org/) and the [AR.js](https://github.com/jeromeetienne/AR.js) library. It is currently in the process of being ported to native [Three.js](https://threejs.org).
 
 AR markers can be downloaded [here](./markers-v0.1.5.pdf).
 
-Although primarily focused on creating an AR experience, PlanetaryAR also features a virtual reality (VR) mode which will build upon the 3D planetary models by offering a locational data and a lightweight map interface.
+Although primarily focused on creating an AR experience, PlanetaryXR also features a virtual reality (VR) mode which will build upon the 3D planetary models by offering a locational data and a lightweight map interface.
 
 Both AR and VR apps are currently in very early development.
 
@@ -27,8 +26,8 @@ Imagery credits as follows:
 + Pluto: NASA / Johns Hopkins University Applied Physics Laboratory / Southwest Research Institute (using data from [New Horizons](https://www.nasa.gov/mission_pages/newhorizons/main/index.html))
 
 ## Links
-+ [Website](http://planetaryar.codemacabre.com/)
-+ [Project info](https://codemacabre.com/prj/planetaryar)
++ [Website](http://planetaryxr.codemacabre.com/)
++ [Project info](https://codemacabre.com/prj/planetaryxr)
 
 ## License
-PlanetaryAR is open source, licensed under the [MIT license](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md).
+PlanetaryXR is open source, licensed under the [MIT license](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md).
