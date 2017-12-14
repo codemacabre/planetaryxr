@@ -1,11 +1,8 @@
 var pgLoader;
 var camera, amLight, light, scene, renderer;
-var geometry, stars, mercury, venus, earth, mars, saturn, uranus, neptune, pluto;
-var matStars, matMercury, matVenus, matEarth, matMars, matJupiter, matSaturn, matUranus, matNeptune, matPluto, matTemp;
+var geometry, geomDebug, stars, mercury, venus, earth, mars, saturn, uranus, neptune, pluto;
+var matDebug, matStars, matMercury, matVenus, matEarth, matMars, matJupiter, matSaturn, matUranus, matNeptune, matPluto;
 var txStars, txMercury, txVenus, txEarth, txMars, txJupiter, txSaturn, txUranus, txNeptune, txPluto;
-
-init();
-animate();
 
 // Initialise Page Loader
 document.addEventListener("DOMContentLoaded", function(e) {
@@ -80,6 +77,7 @@ function setPlanet(planet){
       camera.position.set(800, 0, 32);
       break;
   }
+  stars.position.x = camera.position.x;
 }
 
 function init() {
@@ -95,7 +93,7 @@ function init() {
   scene.add(amLight);
 
 
-  // Initialise textures & materials
+  //#region Initialise textures & materials
   let loader = new THREE.TextureLoader();
   txStars = loader.load('assets/textures/star-map.jpg');
   txMercury = loader.load('assets/textures/mercury.jpg');
@@ -108,6 +106,9 @@ function init() {
   txNeptune = loader.load('assets/textures/neptune.jpg');
   txPluto = loader.load('assets/textures/pluto.jpg');
   
+  matDebug = new THREE.LineBasicMaterial({
+    color: 0xff0000
+  });
   matStars = new THREE.MeshPhongMaterial({
     map: txStars
   });
@@ -138,60 +139,122 @@ function init() {
   matPluto = new THREE.MeshPhongMaterial({
     map: txPluto
   });
-  matTemp = new THREE.MeshNormalMaterial();
+  //#endregion
 
   // Add skydome to scene
   geometry = new THREE.SphereGeometry(24, 32, 32);
   stars = new THREE.Mesh(geometry, matStars);
   stars.material.side = THREE.BackSide;
+  stars.position.x = camera.position.x;
   scene.add(stars);
 
-  // Add planets to scene
+  //#region Add planets to scene
   geometry = new THREE.SphereGeometry(6, 64, 64);
   mercury = new THREE.Mesh(geometry, matMercury);
   mercury.position.set(0, 0, 0);
+  mercury.rotation.z = -0.03560472;
   scene.add(mercury);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   venus = new THREE.Mesh(geometry, matVenus);
   venus.position.set(100, 0, 0);
+  venus.rotation.z = -0.0453786;
   scene.add(venus);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   earth = new THREE.Mesh(geometry, matEarth);
   earth.position.set(200, 0, 0);
+  earth.rotation.z = -0.408407;
   scene.add(earth);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   mars = new THREE.Mesh(geometry, matMars);
   mars.position.set(300, 0, 0);
+  mars.rotation.z = -0.439823;
   scene.add(mars);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   jupiter = new THREE.Mesh(geometry, matJupiter);
   jupiter.position.set(400, 0, 0);
+  jupiter.rotation.z = -0.05462881;
   scene.add(jupiter);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   saturn = new THREE.Mesh(geometry, matSaturn);
   saturn.position.set(500, 0, 0);
+  saturn.rotation.z = -0.4660029;
   scene.add(saturn);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   uranus = new THREE.Mesh(geometry, matUranus);
   uranus.position.set(600, 0, 0);
+  uranus.rotation.z = -1.434661;
   scene.add(uranus);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   neptune = new THREE.Mesh(geometry, matNeptune);
   neptune.position.set(700, 0, 0);
+  neptune.rotation.z = -0.4939282;
   scene.add(neptune);
 
   geometry = new THREE.SphereGeometry(6, 64, 64);
   pluto = new THREE.Mesh(geometry, matPluto);
   pluto.position.set(800, 0, 0);
+  pluto.rotation.z = -1.003564;
   scene.add(pluto);
+  //#endregion
 
+  //#region Add debug geometry to scene
+  geometry = new THREE.Geometry();
+  geometry.vertices.push(new THREE.Vector3(0, -10, 0));
+  geometry.vertices.push(new THREE.Vector3(0, 10, 0));
+  
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = mercury.position.x;
+  debugAxis.rotation.z = mercury.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = venus.position.x;
+  debugAxis.rotation.z = venus.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = earth.position.x;
+  debugAxis.rotation.z = earth.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = mars.position.x;
+  debugAxis.rotation.z = mars.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = jupiter.position.x;
+  debugAxis.rotation.z = jupiter.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = saturn.position.x;
+  debugAxis.rotation.z = saturn.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = uranus.position.x;
+  debugAxis.rotation.z = uranus.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = neptune.position.x;
+  debugAxis.rotation.z = neptune.rotation.z;
+  scene.add(debugAxis);
+
+  debugAxis = new THREE.Line(geometry, matDebug);
+  debugAxis.position.x = pluto.position.x;
+  debugAxis.rotation.z = pluto.rotation.z;
+  scene.add(debugAxis);
+  //#endregion
+  
   renderer = new THREE.WebGLRenderer({
     antialias: true
   });
@@ -202,6 +265,9 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  mercury.rotation.y += 0.01;
+  // mercury.rotateY(0.01); TODO: rotate on local axis
   renderer.render(scene, camera);
 }
+
+init();
+animate();
