@@ -1,6 +1,6 @@
 var pgLoader;
 var camera, amLight, light, scene, renderer;
-var geometry, geomDebug, stars, mercury, venus, earth, mars, saturn, uranus, neptune, pluto;
+var geometry, geomTemp, geomDebug, stars, mercury, venus, earth, mars, saturn, uranus, neptune, pluto;
 var matDebug, matStars, matMercury, matVenus, matEarth, matMars, matJupiter, matSaturn, matUranus, matNeptune, matPluto;
 var txStars, txMercury, txVenus, txEarth, txMars, txJupiter, txSaturn, txUranus, txNeptune, txPluto;
 
@@ -77,7 +77,7 @@ function setPlanet(planet){
       camera.position.set(800, 0, 32);
       break;
   }
-  stars.position.x = camera.position.x;
+  stars.position.set(camera.position.x, camera.position.y, camera.position.z);
 }
 
 function init() {
@@ -141,117 +141,79 @@ function init() {
   });
   //#endregion
 
-  // Add skydome to scene
-  geometry = new THREE.SphereGeometry(24, 32, 32);
+  // Add starfield to scene
+  geometry = new THREE.SphereGeometry(64, 32, 32);
   stars = new THREE.Mesh(geometry, matStars);
   stars.material.side = THREE.BackSide;
-  stars.position.x = camera.position.x;
+  stars.position.set(camera.position.x, camera.position.y, camera.position.z);
   scene.add(stars);
 
   //#region Add planets to scene
   geometry = new THREE.SphereGeometry(6, 64, 64);
-  mercury = new THREE.Mesh(geometry, matMercury);
-  mercury.position.set(0, 0, 0);
-  mercury.rotation.z = -0.03560472;
-  scene.add(mercury);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  venus = new THREE.Mesh(geometry, matVenus);
-  venus.position.set(100, 0, 0);
-  venus.rotation.z = -0.0453786;
-  scene.add(venus);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  earth = new THREE.Mesh(geometry, matEarth);
-  earth.position.set(200, 0, 0);
-  earth.rotation.z = -0.408407;
-  scene.add(earth);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  mars = new THREE.Mesh(geometry, matMars);
-  mars.position.set(300, 0, 0);
-  mars.rotation.z = -0.439823;
-  scene.add(mars);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  jupiter = new THREE.Mesh(geometry, matJupiter);
-  jupiter.position.set(400, 0, 0);
-  jupiter.rotation.z = -0.05462881;
-  scene.add(jupiter);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  saturn = new THREE.Mesh(geometry, matSaturn);
-  saturn.position.set(500, 0, 0);
-  saturn.rotation.z = -0.4660029;
-  scene.add(saturn);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  uranus = new THREE.Mesh(geometry, matUranus);
-  uranus.position.set(600, 0, 0);
-  uranus.rotation.z = -1.434661;
-  scene.add(uranus);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  neptune = new THREE.Mesh(geometry, matNeptune);
-  neptune.position.set(700, 0, 0);
-  neptune.rotation.z = -0.4939282;
-  scene.add(neptune);
-
-  geometry = new THREE.SphereGeometry(6, 64, 64);
-  pluto = new THREE.Mesh(geometry, matPluto);
-  pluto.position.set(800, 0, 0);
-  pluto.rotation.z = -1.003564;
-  scene.add(pluto);
-  //#endregion
-
-  //#region Add debug geometry to scene
-  geometry = new THREE.Geometry();
-  geometry.vertices.push(new THREE.Vector3(0, -10, 0));
-  geometry.vertices.push(new THREE.Vector3(0, 10, 0));
+  geomDebug = new THREE.Geometry();
+  geomDebug.vertices.push(new THREE.Vector3(0, -10, 0));
+  geomDebug.vertices.push(new THREE.Vector3(0, 10, 0));
   
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = mercury.position.x;
-  debugAxis.rotation.z = mercury.rotation.z;
+  mercury = new THREE.Mesh(geometry, matMercury);debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(0, 0, 0);
+  debugAxis.rotation.z = -0.03560472;
+  debugAxis.add(mercury);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = venus.position.x;
-  debugAxis.rotation.z = venus.rotation.z;
+  venus = new THREE.Mesh(geometry, matVenus);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(100, 0, 0);
+  debugAxis.rotation.z = -0.0453786;
+  debugAxis.add(venus);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = earth.position.x;
-  debugAxis.rotation.z = earth.rotation.z;
+  earth = new THREE.Mesh(geometry, matEarth);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(200, 0, 0);
+  debugAxis.rotation.z = -0.408407;
+  debugAxis.add(earth);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = mars.position.x;
-  debugAxis.rotation.z = mars.rotation.z;
+  mars = new THREE.Mesh(geometry, matMars);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(300, 0, 0);
+  debugAxis.rotation.z = -0.439823;
+  debugAxis.add(mars);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = jupiter.position.x;
-  debugAxis.rotation.z = jupiter.rotation.z;
+  jupiter = new THREE.Mesh(geometry, matJupiter);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(400, 0, 0);
+  debugAxis.rotation.z = -0.05462881;
+  debugAxis.add(jupiter);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = saturn.position.x;
-  debugAxis.rotation.z = saturn.rotation.z;
+  saturn = new THREE.Mesh(geometry, matSaturn);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(500, 0, 0);
+  debugAxis.rotation.z = -0.4660029;
+  debugAxis.add(saturn);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = uranus.position.x;
-  debugAxis.rotation.z = uranus.rotation.z;
+  uranus = new THREE.Mesh(geometry, matUranus);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(600, 0, 0);
+  debugAxis.rotation.z = -1.434661;
+  debugAxis.add(uranus);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = neptune.position.x;
-  debugAxis.rotation.z = neptune.rotation.z;
+  neptune = new THREE.Mesh(geometry, matNeptune);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(700, 0, 0);
+  debugAxis.rotation.z = -0.4939282;
+  debugAxis.add(neptune);
   scene.add(debugAxis);
 
-  debugAxis = new THREE.Line(geometry, matDebug);
-  debugAxis.position.x = pluto.position.x;
-  debugAxis.rotation.z = pluto.rotation.z;
+  pluto = new THREE.Mesh(geometry, matPluto);
+  debugAxis = new THREE.Line(geomDebug, matDebug);
+  debugAxis.position.set(800, 0, 0);
+  debugAxis.rotation.z = -1.003564;
+  debugAxis.add(pluto);
   scene.add(debugAxis);
   //#endregion
   
@@ -265,7 +227,15 @@ function init() {
 
 function animate() {
   requestAnimationFrame(animate);
-  // mercury.rotateY(0.01); TODO: rotate on local axis
+  mercury.rotateY(0.01);
+  venus.rotateY(0.01);
+  earth.rotateY(0.01);
+  mars.rotateY(0.01);
+  jupiter.rotateY(0.01);
+  saturn.rotateY(0.01);
+  uranus.rotateY(0.01);
+  neptune.rotateY(0.01);
+  pluto.rotateY(0.01);
   renderer.render(scene, camera);
 }
 
