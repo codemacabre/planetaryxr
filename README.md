@@ -1,7 +1,7 @@
 # PlanetaryXR
 
-[![GitHub issues](https://img.shields.io/github/issues/codemacabre/planetaryar.svg)](https://github.com/codemacabre/planetaryar/issues)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/CodeMacabre/planetaryar/blob/master/LICENSE.md)
+[![GitHub issues](https://img.shields.io/github/issues/codemacabre/planetaryxr.svg)](https://github.com/codemacabre/planetaryxr/issues)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 ## Overview
 [PlanetaryXR](http://codemacabre.com/prj/planetaryxr/) (formerly PlanetaryAR) is an augmented reality (AR) / virtual reality (VR) web app featuring 3D models of planetary bodies, built using [A-Frame](https://a-frame.io/), [ARToolKit](https://artoolkit.org/) and the [AR.js](https://github.com/jeromeetienne/AR.js) library. It is currently in the process of being ported to native [Three.js](https://threejs.org).
