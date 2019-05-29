@@ -4,29 +4,34 @@
 <head>
   <title>PlanetaryXR</title>
   <meta charset="utf-8">
-  <meta name="description" content="PlanetaryXR">
+  <meta title="PlanetaryXR">
+  <meta name="description" content="A mixed-reality solar system, featuring 3D maps and models of planetary bodies">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no, minimal-ui">
-  <!-- SCRIPTS -->
-    <script src="./js/analytics.js"></script>
-  <!-- STYLING -->
+  
+  <!-- STYLES -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,500" rel="stylesheet">
   <link href="https://use.fontawesome.com/bde36a6fc9.css" rel="stylesheet">
-  <link href="https://codemacabre.com/css/style.css" rel="stylesheet">
   <link href="./css/app.css" rel="stylesheet">
+
+  <!-- SCRIPTS -->
+  <script>
+    window.onload = () => {
+      // Insert current year
+      const date = document.querySelector('#date')
+      if (date) {
+        date.innerHTML = new Date().getFullYear()
+      }
+    }
+  </script>
 </head>
 
 <body>
-  <a id="nav-left" href="https://codemacabre.com/prj/planetaryxr"><i class="fa fa-angle-left"></i> Back</a>
-  <div id="page">
-    <div id="splash-content" class="container">
-      <h1>PlanetaryXR</h1>
-      <a href="./ar.html" class="button">AR</a>
-      <a href="./vr.html" class="button">VR</a>
-    </div>
+  <div class="start-page">
+    <h1>PlanetaryXR</h1>
+    <a href="./ar.html">AR</a> / <a href="./vr.html">VR</a>
   </div>
   <footer>
-    <p>Site & contents © <a href="https://codemacabre.com">CodeMacabre</a> 2016 - <span id="span-date"></span></p>
-    <script src="https://codemacabre.com/js/script.js"></script>
+    <p>Site & contents © <a href="https://myleslewando.com">Myles Lewando</a> 2016 - <span id="date"></span></p>
   </footer>
 </body>
 
